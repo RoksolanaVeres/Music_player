@@ -9,66 +9,77 @@ import shampanskiOchi from "./assets/songs/shampanski_ochi.mp3";
 import shchedraNich from "./assets/songs/shchedra_nich.mp3";
 import tryKhvylyny from "./assets/songs/try_khvylyny.mp3";
 
+import biliaSertsiaImg from "./assets/images/bilia_sertsia.jpg";
+import fortepianoImg from "./assets/images/fortepiano.jpg";
+import heroiamImg from "./assets/images/heroiam.jpg";
+import kvityMinnykhZonImg from "./assets/images/kvity_minnykh_zon.jpg";
+import pohliadImg from "./assets/images/pohliad.jpg";
+import porichkaImg from "./assets/images/porichka.jpg";
+import ridniMoiImg from "./assets/images/ridni_moi.jpg";
+import shampanskiOchiImg from "./assets/images/shampanski_ochi.jpg";
+import shchedraNichImg from "./assets/images/shchedra_nich.jpg";
+import tryKhvylynyImg from "./assets/images/try_khvylyny.jpg";
+
 const songs = [
   {
     title: "Біля серця",
     singer: "KOLA",
     audio: biliaSertsia,
-    img: "some image",
+    img: biliaSertsiaImg,
   },
   {
     title: "Фортепіано",
     singer: "Христина Соловій",
     audio: fortepiano,
-    img: "some image",
+    img: fortepianoImg,
   },
   {
     title: "Героям",
     singer: "Без Обмежень",
     audio: heroiam,
-    img: "some image",
+    img: heroiamImg,
   },
   {
     title: "Квіти мінних зон",
     singer: "Океан Ельзи",
     audio: kvityMinnykhZon,
-    img: "some image",
+    img: kvityMinnykhZonImg,
   },
   {
     title: "Погляд",
     singer: "Yaktak",
     audio: pohliad,
-    img: "some image",
+    img: pohliadImg,
   },
   {
     title: "Порічка",
     singer: "KOLA, Yaktak",
     audio: porichka,
-    img: "some image",
+    img: porichkaImg,
   },
   {
     title: "Рідні мої",
     singer: "Alyona, Jerry Heil",
     audio: ridniMoi,
-    img: "some image",
+    img: ridniMoiImg,
   },
   {
     title: "Шампанські очі",
     singer: "Pianoboy",
     audio: shampanskiOchi,
-    img: "some image",
+    img: shampanskiOchiImg,
   },
   {
     title: "Щедра ніч",
     singer: "KOLA, Alyona, Jerry Heil",
     audio: shchedraNich,
-    img: "some image",
+    img: shchedraNichImg,
   },
   {
     title: "Три хвилини",
     singer: "Друга Ріка",
     audio: tryKhvylyny,
-    img: "some image",
+    img: tryKhvylynyImg,
   },
 ];
 

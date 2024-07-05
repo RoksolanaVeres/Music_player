@@ -56,22 +56,43 @@ export default function MusicPlayer() {
   }
 
   function handlePrevClick() {
-    setCurrentSongIndex((prevIndex) => prevIndex - 1);
-    audioRef.current.pause();
-    audioRef.current.currentTime = 0;
-    setIsPlaying(false);
+    if (currentSongIndex === 0) {
+      setCurrentSongIndex(myPlaylist.length - 1);
+    } else {
+      setCurrentSongIndex((prevIndex) => prevIndex - 1);
+    }
+    autoPlaySongs();
   }
 
   function handleNextClick() {
-    setCurrentSongIndex((prevIndex) => prevIndex + 1);
-    audioRef.current.pause();
-    audioRef.current.currentTime = 0;
-    setIsPlaying(false);
+    if (currentSongIndex === myPlaylist.length - 1) {
+      setCurrentSongIndex(0);
+    } else {
+      setCurrentSongIndex((prevIndex) => prevIndex + 1);
+    }
+    autoPlaySongs();
+  }
+
+  function autoPlaySongs() {
+    audioRef.current.setAttribute("autoPlay", true);
+    if (!isPlaying) {
+      setIsPlaying(true);
+    }
+  }
+
+  function handleEndOfSong() {
+    handleNextClick();
   }
 
   return (
     <div className={classes.musicPlayer__container}>
-      <audio ref={audioRef} onLoadedMetadata={onLoadedMetadata} src={currentSong.audio}>
+      <img src={currentSong.img} alt="" className={classes.songImg} />
+      <audio
+        ref={audioRef}
+        onLoadedMetadata={onLoadedMetadata}
+        onEnded={handleEndOfSong}
+        src={currentSong.audio}
+      >
         {/* <source src={currentSong.audio} type="audio/mp3" /> */}
         Your browser does not support the audio element.
       </audio>

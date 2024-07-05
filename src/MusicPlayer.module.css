@@ -3,19 +3,31 @@
   border-radius: 1rem;
   width: 100%;
   max-width: 500px;
-  padding: 80px 20px;
+  padding: 150px 20px 50px;
+  position: relative;
+}
+
+.songImg {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 1rem;
 }
 
 .title__container {
   text-align: center;
   display: grid;
-  gap:1rem;
+  gap: 5px;
   margin-bottom: 2rem;
 }
 
 .musicTime__container {
   display: flex;
   justify-content: space-between;
+  color: #526168;
 }
 
 .musicButtons__container {
@@ -34,6 +46,11 @@
   cursor: pointer;
   background-color: #219ebc;
   border-radius: 1rem;
+  transition: all 0.3s;
+}
+
+.controlButton:hover {
+ background-color: #23afd2;
 }
 
 .playButton {
