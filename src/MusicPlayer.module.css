@@ -1,0 +1,117 @@
+.musicPlayer__container {
+  border: 2px solid #219ebc;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 500px;
+  padding: 80px 20px;
+}
+
+.title__container {
+  text-align: center;
+  display: grid;
+  gap:1rem;
+  margin-bottom: 2rem;
+}
+
+.musicTime__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.musicButtons__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.controlButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  background-color: #219ebc;
+  border-radius: 1rem;
+}
+
+.playButton {
+  height: 50px;
+  width: 50px;
+}
+
+.rangeBar {
+  --range-progress: 0;
+
+  -webkit-appearance: none;
+  position: relative;
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* Input range - firefox */
+.rangeBar::-moz-range-track {
+  position: relative;
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* played progress length - Chrome & safari*/
+.rangeBar::before {
+  content: "";
+  height: 2px;
+  background: #f50;
+  width: var(--range-progress);
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* played progress length - firefox */
+.rangeBar::-moz-range-progress {
+  background: #f50;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  height: 2px;
+}
+
+/* slider thumb - chrome and safari */
+.rangeBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f50;
+  cursor: pointer;
+  position: relative;
+}
+
+/* dragging thumb - chrome and safari */
+.rangeBar:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+/* slider thumb - firefox */
+.rangeBar::-moz-range-thumb {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #f50;
+  cursor: pointer;
+  border: transparent;
+  position: relative;
+}
+/* dragging thumb - firefox */
+.rangeBar:active::-moz-range-thumb {
+  transform: scale(1.2);
+}
