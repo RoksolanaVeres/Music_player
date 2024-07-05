@@ -71,8 +71,8 @@ export default function MusicPlayer() {
 
   return (
     <div className={classes.musicPlayer__container}>
-      <audio ref={audioRef} onLoadedMetadata={onLoadedMetadata}>
-        <source src={currentSong.audio} type="audio/mp3" />
+      <audio ref={audioRef} onLoadedMetadata={onLoadedMetadata} src={currentSong.audio}>
+        {/* <source src={currentSong.audio} type="audio/mp3" /> */}
         Your browser does not support the audio element.
       </audio>
 
